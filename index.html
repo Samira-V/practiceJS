@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js practice</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="one-container container">
+            <div class="one container">
+                <h3>تمرین 1:
+                    <p>یک متغیر Age تعریف کن بررسی کن
+
+                    </p>
+                    <div class="check">
+                        <input type="number" class="number">
+                        <button class="btn"> بررسی</button>
+
+                    </div>
+                    <p>آیا فرد بالای 18 سال هست یا نه؟
+                    <p class="text"></p>
+                    </p>
+                    <p> آیا سن او بین 18 تا 30 هست؟</p>
+                    <p class="text-2"></p>
+
+                </h3>
+            </div>
+        </div>
+        <div class="two-container container">
+            <div class="two">
+                <h3>تمرین 2:</h3>
+                <p>مشخصات ماشین را وارد کن</p>
+                <form action="" id="form" onsubmit="return addFormInputs(this)">
+                    <div>
+                        <lable>نام</lable>
+                        <input type="text" class="name" name="carName">
+                    </div>
+                    <div>
+                        <lable>مدل</lable>
+                        <input type="text" class="model" name="model">
+                    </div>
+                    <div>
+                        <lable>سال</lable>
+                        <input type="date" class="year" name="year">
+                    </div>
+
+                    <p>آیا برقی هست؟</p>
+                    <div class="radio">
+                        <input class="radio-btn" name='radio' type="radio" id="yes" value="بله">
+                        <label for="yes">بله</label>
+                        <input class="radio-btn" type="radio" name='radio' id="no" value="نه">
+                        <label for="no">نه</label>
+                    </div>
+
+                    <input type="button" class="show-car" value="نمایش">
+
+
+
+                </form>
+                <div class="car-details"></div>
+            </div>
+        </div>
+        <div class="three-container container">
+            <h3>تمرین 3:</h3>
+            <p>آرایه بساز و ...</p>
+            <input type="text" class="input-array">
+            <button class="make-array"> آرایه بساز</button>
+            <p class="shopping-list"> آرایه : </p>
+            <p class="first-item"></p>
+            <p class="last-item"></p>
+            <p class="list-length"> </p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: iranSans;
+    src: url(./font/IRANSans.woff);
+}
+.container{
+    max-width: 1300px;
+    margin-block: 50px;
+  
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:  iranSans;
+}
+.one{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 50px;
+    background-color:#EED6D3 ;
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+}
+.check{
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 4px;
+    border-radius: 20px;
+    margin-block: 20px;
+}
+input{
+    padding: 5px;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+}
+.btn{
+    background-color:#67595E;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline:none;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.one p {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.text ,.text-2{
+    color: #e12929;
+    font-size: 14px!important;
+}
+
+.two{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-block: 50px;
+    background-color:#96AAA7;
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+}
+.show-car{
+    background-color: #EED6D3;
+    color: #000;
+    padding: 8px 20px;
+  margin-block: 20px;
+}
+.two lable{
+    font-size: 12px;
+}
+.isElectric{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.isElectric div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+ .radio{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+   
+ }
+.car-details{
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+}
+
+
+/* three */
+.three-container{
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    
+    gap:10px;
+
+}
+.input-array{
+padding: 10px 5px;
+
+}
+.make-array{
+    all: unset;
+    width: 100%;
+    padding: 10px 0;
+   
+    border-radius: 5px;
+    background-color: #ccc;
+    text-align: center;
+    margin: 0 auto;
+
+
+
+}
+.shopping-list{
+
+}
+.last-item{
+
+}
+.list-length{
+
+}
