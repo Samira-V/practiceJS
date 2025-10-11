@@ -41,7 +41,7 @@ input , button{
     box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
 }
 .check{
-    width: 300px;
+ 
     height: 40px;
     display: flex;
     align-items: center;
@@ -194,6 +194,7 @@ text-align: center;
     background-color: #cf995f;
     border-radius: 20px;
     padding: 20px;
+  
    
 }
 #user{
@@ -206,7 +207,7 @@ text-align: center;
 }
 
 .add{
-        width: 300px;
+  
     height: 40px;
   
     background-color: #fff;
@@ -219,8 +220,10 @@ display: flex;
 align-items: flex-start;
 justify-content: flex-start;
     background-color: #fff;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 20px;
+    width: 100%;
+    overflow: scroll;
 }
 .fav-container{
     display: flex;
@@ -238,4 +241,24 @@ justify-content: flex-start;
     width: 50px;
     height: 35px;
 
+}
+.btns{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+
+@media (width <= 768px){
+    .container{
+        flex-direction: column;
+    }
+    .col{
+       flex-basis: 100%;
+    }
+}
+@media (width <= 1024px){
+   
+    .col{
+        width: 100%;
+    }
 }

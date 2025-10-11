@@ -69,19 +69,19 @@ const inputArray = document.querySelector('.input-array')
 const makeArray = document.querySelector('.make-array')
 let array = []
 makeArray.addEventListener('click', () => {
-    if(inputArray.value !== ""){
+    if (inputArray.value !== "") {
         array.push(inputArray.value)
-        shoppingList.innerHTML +=inputArray.value + " "
-       firstItem.innerHTML = `اولین عنصر : ${array[0]}`
-       lastItem.innerHTML = ` آخرین عنصر : ${array[array.length-1]}`
-       listLength.innerHTML = `طول آرایه : ${array.length}`
+        shoppingList.innerHTML += inputArray.value + " "
+        firstItem.innerHTML = `اولین عنصر : ${array[0]}`
+        lastItem.innerHTML = ` آخرین عنصر : ${array[array.length - 1]}`
+        listLength.innerHTML = `طول آرایه : ${array.length}`
         inputArray.value = ""
-        firstItem.value =  ''
-        lastItem.value=''
+        firstItem.value = ''
+        lastItem.value = ''
         listLength.length = ""
 
     }
-   
+
 })
 
 
@@ -92,18 +92,18 @@ const evenOddNumber = document.querySelector(".even-odd-number")
 const evenOdd = document.querySelector(".even-odd")
 const evenOddCheck = document.querySelector(".even-odd-check")
 
-evenOddCheck.addEventListener("click" , ()=>{
-    if(evenOddNumber.value % 2 === 0){
+evenOddCheck.addEventListener("click", () => {
+    if (evenOddNumber.value % 2 === 0) {
         evenOdd.innerHTML = ` عدد ${evenOddNumber.value} زوج هست.`
-        
+
     }
-    else{
+    else {
         evenOdd.innerHTML = ` عدد ${evenOddNumber.value} فرد هست.`
-         
+
 
     }
 })
-evenOddNumber.addEventListener("focus" , ()=>{
+evenOddNumber.addEventListener("focus", () => {
     evenOddNumber.value = ""
 })
 
@@ -114,23 +114,37 @@ const age = document.querySelector(".age")
 const favorate = document.querySelector(".favorate")
 const addFav = document.querySelector(".add-fav")
 const checkUser = document.querySelector(".check-user")
+const resetUser = document.querySelector(".reset-user")
 const userInfo = document.querySelector(".user-info")
 const favList = document.querySelector(".fav-list")
 
 
-let user ={ username:'',age:'',favorate:[]}
+let user = { username: '', age: '', favorate: [] }
 
-addFav.addEventListener("click" , (e)=>{
-e.preventDefault()
-user.favorate.push(favorate.value)
-favorate.value=""
-favList.innerHTML = user.favorate
-user.age = age.value
-user.username = username.value
+addFav.addEventListener("click", (e) => {
+    e.preventDefault()
+    user.favorate.push(favorate.value)
+    favorate.value = ""
+    favList.innerHTML = user.favorate
+    user.age = age.value
+    user.username = username.value
 
 })
-checkUser.addEventListener( "click" , (e)=>{
+checkUser.addEventListener("click", (e) => {
     e.preventDefault()
     userInfo.innerHTML = `سن ${user.username} ${user.age} سال است .<br> 
-    اولین علاقمندی ${user.username} ${user.favorate[0]} , و آخرین علاقمندی ${user.username} ${user.favorate[user.favorate.length-1]} است.`
+    اولین علاقمندی ${user.username} ${user.favorate[0]} , و آخرین علاقمندی ${user.username} ${user.favorate[user.favorate.length - 1]} است.`
+
+})
+resetUser.addEventListener("click", (e) => {
+    e.preventDefault()
+    username.value = ""
+    age.value = ""
+    favorate.value = ""
+    favList.innerHTML = ""
+     user.favorate =[]
+    user.age = ""
+    user.username = ""
+    userInfo.innerHTML=""
+
 })
