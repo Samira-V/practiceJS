@@ -83,3 +83,54 @@ makeArray.addEventListener('click', () => {
     }
    
 })
+
+
+// four 
+
+const fourContainer = document.querySelector(".four-container")
+const evenOddNumber = document.querySelector(".even-odd-number")
+const evenOdd = document.querySelector(".even-odd")
+const evenOddCheck = document.querySelector(".even-odd-check")
+
+evenOddCheck.addEventListener("click" , ()=>{
+    if(evenOddNumber.value % 2 === 0){
+        evenOdd.innerHTML = ` عدد ${evenOddNumber.value} زوج هست.`
+        
+    }
+    else{
+        evenOdd.innerHTML = ` عدد ${evenOddNumber.value} فرد هست.`
+         
+
+    }
+})
+evenOddNumber.addEventListener("focus" , ()=>{
+    evenOddNumber.value = ""
+})
+
+
+// five 
+const username = document.querySelector(".username")
+const age = document.querySelector(".age")
+const favorate = document.querySelector(".favorate")
+const addFav = document.querySelector(".add-fav")
+const checkUser = document.querySelector(".check-user")
+const userInfo = document.querySelector(".user-info")
+const favList = document.querySelector(".fav-list")
+
+
+let user ={ username:'',age:'',favorate:[]}
+
+addFav.addEventListener("click" , (e)=>{
+e.preventDefault()
+user.favorate.push(favorate.value)
+favorate.value=""
+favList.innerHTML = user.favorate
+user.age = age.value
+user.username = username.value
+
+})
+checkUser.addEventListener( "click" , (e)=>{
+    e.preventDefault()
+    userInfo.innerHTML = `سن ${user.username} ${user.age} سال است .<br> 
+    اولین علاقمندی ${user.username} ${user.favorate[0]} , و آخرین علاقمندی ${user.username} ${user.favorate[user.favorate.length-1]} است.`
+})

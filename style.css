@@ -10,13 +10,24 @@
 .container{
     max-width: 1300px;
     margin-block: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
   
+}
+.col{
+    width: calc(33% - 30px);
 }
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     font-family:  iranSans;
+}
+input , button{
+    font-family: iranSans;
 }
 .one{
     display: flex;
@@ -50,11 +61,15 @@ input{
 .btn{
     background-color:#67595E;
     color: #fff;
+ 
     padding: 10px;
     border: none;
     outline:none;
     border-radius: 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .one p {
@@ -126,7 +141,7 @@ form{
     color: #000;
     display: flex;
     flex-direction: column;
-    
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
     gap:10px;
 
 }
@@ -147,12 +162,80 @@ padding: 10px 5px;
 
 
 }
-.shopping-list{
+
+
+/* four styles  */
+
+.four-container{
+   margin-block: 30px;
+   background-color: #DFD5A5; 
+   padding: 20px;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: column;
+   /* height:200px; */
+}
+
+.even-odd{
+    background-color: #628395;
+    padding: 20px;
+    width: 100%;
+    color: #fff;
+    border-radius: 50px;
+text-align: center;
+}
+
+
+/* five */
+
+.five-container{
+    background-color: #cf995f;
+    border-radius: 20px;
+    padding: 20px;
+   
+}
+#user{
+    background-color: #DFD5A5;
+    margin-block: 30px;
+    padding: 20px;
+    border-radius: 10px;
+      display: flex;
+   align-items: flex-start;
+}
+
+.add{
+        width: 300px;
+    height: 40px;
+  
+    background-color: #fff;
+    padding: 10px 4px;
+    border-radius: 20px;
+  
+}
+.fav-list{
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+.fav-container{
+    display: flex;
+    flex-direction: column;
+}
+.fav-container div{
+    display: flex;
 
 }
-.last-item{
-
+.add{
+        display: flex;
+    align-items: center;
 }
-.list-length{
+.add-fav{
+    width: 50px;
+    height: 35px;
 
 }

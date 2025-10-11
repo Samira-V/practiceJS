@@ -10,7 +10,7 @@
 
 <body>
     <div class="container">
-        <div class="one-container container">
+        <div class="one-container col">
             <div class="one container">
                 <h3>تمرین 1:
                     <p>یک متغیر Age تعریف کن بررسی کن
@@ -30,7 +30,7 @@
                 </h3>
             </div>
         </div>
-        <div class="two-container container">
+        <div class="two-container col">
             <div class="two">
                 <h3>تمرین 2:</h3>
                 <p>مشخصات ماشین را وارد کن</p>
@@ -64,7 +64,7 @@
                 <div class="car-details"></div>
             </div>
         </div>
-        <div class="three-container container">
+        <div class="three-container col">
             <h3>تمرین 3:</h3>
             <p>آرایه بساز و ...</p>
             <input type="text" class="input-array">
@@ -73,6 +73,45 @@
             <p class="first-item"></p>
             <p class="last-item"></p>
             <p class="list-length"> </p>
+        </div>
+        <div class="four-container col">
+            <h3>تمرین 4</h3>
+            <p>عد زوج یا فرد</p>
+          <div class="check" >
+                        <input type="number" class="even-odd-number">
+                        <button class="btn even-odd-check"> بررسی</button>
+
+                    </div>
+            <p class="even-odd"></p>
+
+        </div>
+        <div class="five-container col">
+            <h3>تمرین 5</h3>
+            <p>بررسی سن و علاقمندی های کاربر</p>
+            <form action="" id="user">
+                <div>
+                    <label for="username"> نام کاربر</label>
+                    <input type="text" class="username">
+                </div>
+                <div>
+                    <label for="age"> سن </label>
+                    <input type="number" class="age">
+                </div>
+                 <div class="fav-container">
+                     <label for="favorate"> علاقه مندی ها </label>
+                     <div class="add" >
+                        <input type="text" class="favorate">
+                        <button class="btn add-fav"> +</button>
+
+                    </div>
+                </div>
+                <div class="fav-list">
+                   
+                </div>
+            <button class="btn check-user">بررسی کاربر</button>
+            </form>
+
+            <p class="user-info"></p>
         </div>
     </div>
     <script src="./script.js"></script>
