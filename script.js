@@ -29,7 +29,8 @@ console.log(carName.value)
 const model = document.querySelector('.model')
 
 const year = document.querySelector('.year')
-const isElectric = document.querySelectorAll(".radio-btn")
+const isElectric = document.querySelectorAll(".yes-btn")
+const isNotElectric = document.querySelectorAll(".no-btn")
 const showCar = document.querySelector('.show-car')
 
 const carDetails = document.querySelector('.car-details')
@@ -40,22 +41,20 @@ var car = {
     model: model.value,
     year: year.value,
     isElectric: isElectric.value
+
 }
 
 
-console.log(car)
+
 showCar.addEventListener('click', () => {
-    carDetails.innerHTML = `نام برند :${carName.value}   <br> مدل : ${model.value} <br> سال ساخت :${year.value}<br>`
-    // for(i in isElectric){
-    // if(isElectric.value[i] =="بله"){
-    //     carDetails.innerHTML = `ماشین برقی هست`
-    // }
-    // else{
-    //     carDetails.innerHTML = `ماشین برقی نیست`
+    if (car.isElectric === "بله") {
+        carDetails.innerHTML = `نام برند :${carName.value}   <br> مدل : ${model.value} <br> سال ساخت :${year.value}<br> ماشین برقی است`
 
-    // }
+    }
+    else {
+        carDetails.innerHTML = `نام برند :${carName.value}   <br> مدل : ${model.value} <br> سال ساخت :${year.value}<br> ماشین برقی نیست`
 
-    // }
+    }
 })
 
 
@@ -142,9 +141,82 @@ resetUser.addEventListener("click", (e) => {
     age.value = ""
     favorate.value = ""
     favList.innerHTML = ""
-     user.favorate =[]
+    user.favorate = []
     user.age = ""
     user.username = ""
-    userInfo.innerHTML=""
+    userInfo.innerHTML = ""
 
 })
+
+
+// calculatur 
+
+const numbers = document.querySelectorAll(".num")
+const display = document.querySelector(".display")
+const clear = document.querySelector(".clear")
+const plus = document.querySelector('.plus')
+const minus = document.querySelector('.minus')
+const equal = document.querySelector('.equal')
+const divide = document.querySelector('.divide')
+const multiple = document.querySelector('.multiple')
+
+const opration = [plus.value, minus.value, equal.value, divide.value, multiple.value]
+console.log(opration)
+numbers.forEach((number) => {
+    console.log(number.innerText)
+
+    number.addEventListener("click", () => {
+        display.value += number.innerText
+    })
+})
+
+
+clear.addEventListener('click', () => {
+    console.log('clear')
+    display.value = " "
+})
+
+plus.addEventListener('click', () => {
+    display.value += plus.innerHTML
+})
+minus.addEventListener('click', () => {
+    display.value += minus.innerHTML
+})
+multiple.addEventListener('click', () => {
+    display.value += multiple.innerHTML
+})
+divide.addEventListener('click', () => {
+    display.value += divide.innerHTML
+})
+
+equal.addEventListener('click', () => {
+
+if(opr = display.value.split("+")){
+    
+    // opr = display.value.split("*")
+    // opr = display.value.split("/")
+    opr.map(item => {
+        Number(item)
+
+    })
+    console.log(opr)
+
+    const total = opr.reduce(function (result, item) {
+        return (result += Number(item))
+    }, 0)
+
+    display.value = total
+}
+
+  
+
+
+}
+
+
+
+
+);
+
+
+

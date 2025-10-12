@@ -50,9 +50,11 @@
 
                     <p>آیا برقی هست؟</p>
                     <div class="radio">
-                        <input class="radio-btn" name='radio' type="radio" id="yes" value="بله">
+                        <input class="yes-btn" name='radio' type="radio" id="yes" value="بله">
+
                         <label for="yes">بله</label>
-                        <input class="radio-btn" type="radio" name='radio' id="no" value="نه">
+                        <input class="no-btn" type="radio" name='radio' id="no" value="نه">
+                        
                         <label for="no">نه</label>
                     </div>
 
@@ -77,11 +79,11 @@
         <div class="four-container col">
             <h3>تمرین 4</h3>
             <p>عد زوج یا فرد</p>
-          <div class="check" >
-                        <input type="number" class="even-odd-number">
-                        <button class="btn even-odd-check"> بررسی</button>
+            <div class="check">
+                <input type="number" class="even-odd-number">
+                <button class="btn even-odd-check"> بررسی</button>
 
-                    </div>
+            </div>
             <p class="even-odd"></p>
 
         </div>
@@ -97,16 +99,16 @@
                     <label for="age"> سن </label>
                     <input type="number" class="age">
                 </div>
-                 <div class="fav-container">
-                     <label for="favorate"> علاقه مندی ها </label>
-                     <div class="add" >
+                <div class="fav-container">
+                    <label for="favorate"> علاقه مندی ها </label>
+                    <div class="add">
                         <input type="text" class="favorate">
                         <button class="btn add-fav"> +</button>
 
                     </div>
                 </div>
                 <div class="fav-list">
-                   
+
                 </div>
                 <div class="btns">
 
@@ -116,6 +118,43 @@
             </form>
 
             <p class="user-info"></p>
+        </div>
+
+        <div class="calculatur">
+            <h3>ماشین حساب</h3>
+
+            <div class="calculatur-container">
+                <input type="text" class="display">
+                <div class="numbers">
+                    <div class="row">
+                        <button class="plus" value="+">+</button>
+                        <button class="num" value="3">3</button>
+                        <button class="num" value="2">2</button>
+                        <button class="num" value="1">1</button>
+                    </div>
+                    <div class="row">
+                        <button class="minus" value="-">-</button>
+
+                        <button class="num" value="6">6</button>
+                        <button class="num" value="5">5</button>
+                        <button class="num" value="4">4</button>
+
+                    </div>
+                    <div class="row">
+                        <button class="num" value="0">0</button>
+                        <button class="num" value="9">9</button>
+                        <button class="num" value="8">8</button>
+                        <button class="num" value="7">7</button>
+                    </div>
+                       <div class="row">
+                           <button class="clear" value="">C</button>
+                        <button class="equal" value="=">=</button>
+                        <button class="divide" value="/">/</button>
+                        <button class="multiple" value="*">*</button>
+                    </div>
+                   
+                </div>
+            </div>
         </div>
     </div>
     <script src="./script.js"></script>
