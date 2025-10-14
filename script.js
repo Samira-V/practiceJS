@@ -234,3 +234,34 @@ equal.addEventListener('click', () => {
 
 
 
+//  seven 
+
+
+
+const hoopNumber = document.querySelector('.hoop-number')
+const numbersDivisible = document.querySelector('.numbersDivisible')
+const checkDivisible = document.querySelector('.divide-btn')
+const errorText = document.querySelector('.text')
+let numberArr = []
+checkDivisible.addEventListener('click', () => {
+  
+    if(hoopNumber.value<=5){
+        for (let i = 1; i <= 100; i++) {
+            if ((i % hoopNumber.value) === 0) {
+                numberArr.push(i)
+            }
+        }
+        console.log(numberArr)
+        numbersDivisible.innerHTML = numberArr
+
+    }
+    else{
+       errorText.innerHTML = 'لطفا عدد کوچکتر از 5 وارد کنید'
+
+    }
+})
+
+hoopNumber.addEventListener('focus', () => {
+    numbersDivisible.innerHTML = ""
+    numberArr = []
+})
