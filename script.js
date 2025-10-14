@@ -244,8 +244,8 @@ const checkDivisible = document.querySelector('.divide-btn')
 const errorText = document.querySelector('.text')
 let numberArr = []
 checkDivisible.addEventListener('click', () => {
-  
-    if(hoopNumber.value<=5){
+
+    if (hoopNumber.value <= 5) {
         for (let i = 1; i <= 100; i++) {
             if ((i % hoopNumber.value) === 0) {
                 numberArr.push(i)
@@ -255,8 +255,8 @@ checkDivisible.addEventListener('click', () => {
         numbersDivisible.innerHTML = numberArr
 
     }
-    else{
-       errorText.innerHTML = 'لطفا عدد کوچکتر از 5 وارد کنید'
+    else {
+        errorText.innerHTML = 'لطفا عدد کوچکتر از 5 وارد کنید'
 
     }
 })
@@ -264,4 +264,27 @@ checkDivisible.addEventListener('click', () => {
 hoopNumber.addEventListener('focus', () => {
     numbersDivisible.innerHTML = ""
     numberArr = []
+})
+
+// eight 
+const sumEven = document.querySelector('.even-btn')
+const evenNum = document.querySelector('.even-number')
+const resultSum = document.querySelector('.sum')
+sumEven.addEventListener('click' , ()=>{
+    sumEvenNumbers(evenNum.value)
+})
+function sumEvenNumbers(item) {
+    let sum = 0
+    for (let i = 2; i <= item; i++) {
+        if (i % 2 === 0) {
+            sum += i
+            
+        }
+    }
+    console.log(sum)
+    resultSum.innerHTML = sum
+} 
+evenNum.addEventListener('focus', () => {
+    resultSum.innerHTML = ""
+    evenNum.value=""
 })

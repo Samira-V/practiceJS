@@ -328,7 +328,7 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 
 /* seven  */
 .hoop{
-    width: 400px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -345,7 +345,7 @@ border-radius: 10px;
     background-color: #DFD5A5;
 }
 .numbersDivisible{
-    width: 400px;
+    width: 300px;
   padding: 20px;
   background-color: #eeb5b5;
     overflow: scroll;
@@ -353,9 +353,15 @@ border-radius: 10px;
 .text{
     display: block;
     color: red!important;
-    width: 400px;
+    width: 300px;
     height: 20px;
     background-color: #eeb5b5;
 }
 
+
+/* eight  */
+.even-num{
+    width: 100%;
+    background-color: #e7c4a0;
+}
 
