@@ -30,35 +30,35 @@
                 </h3>
             </div>
         </div>
-        <div class="two-container col">
+       <div class="two-container col">
             <div class="two">
                 <h3>تمرین 2:</h3>
                 <p>مشخصات ماشین را وارد کن</p>
-                <form action="" id="form" onsubmit="return addFormInputs(this)">
+                <form onsubmit="addFormInputs(event)">
                     <div>
                         <lable>نام</lable>
-                        <input type="text" class="name" name="carName">
+                        <input type="text"  name="carName">
                     </div>
                     <div>
                         <lable>مدل</lable>
-                        <input type="text" class="model" name="model">
+                        <input type="text"  name="model">
                     </div>
                     <div>
                         <lable>سال</lable>
-                        <input type="date" class="year" name="year">
+                        <input type="date"  name="year">
                     </div>
 
                     <p>آیا برقی هست؟</p>
                     <div class="radio">
-                        <input class="yes-btn" name='radio' type="radio" id="yes" value="بله">
+                        <input  type="radio" name='isElectric'   value="برقی هست">
 
                         <label for="yes">بله</label>
-                        <input class="no-btn" type="radio" name='radio' id="no" value="نه">
+                        <input  type="radio" name='isElectric'  value="برقی نیست">
                         
                         <label for="no">نه</label>
                     </div>
 
-                    <input type="button" class="show-car" value="نمایش">
+                    <button class="show-car" >نمایش</button>
 
 
 
@@ -92,17 +92,17 @@
             <p>بررسی سن و علاقمندی های کاربر</p>
             <form action="" id="user">
                 <div>
-                    <label for="username"> نام کاربر</label>
-                    <input type="text" class="username">
+                    <label for="userName"> نام کاربر</label>
+                    <input type="text" name="userName" class="username">
                 </div>
                 <div>
                     <label for="age"> سن </label>
-                    <input type="number" class="age">
+                    <input type="number" name="age" class="age">
                 </div>
                 <div class="fav-container">
                     <label for="favorate"> علاقه مندی ها </label>
                     <div class="add">
-                        <input type="text" class="favorate">
+                        <input type="text" name="favorate" class="favorate">
                         <button class="btn add-fav"> +</button>
 
                     </div>

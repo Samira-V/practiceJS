@@ -24,38 +24,32 @@ number.addEventListener('focus', () => {
 
 
 // two 
-const carName = document.querySelector(".name")
-console.log(carName.value)
-const model = document.querySelector('.model')
 
-const year = document.querySelector('.year')
-const isElectric = document.querySelectorAll(".yes-btn")
-const isNotElectric = document.querySelectorAll(".no-btn")
 const showCar = document.querySelector('.show-car')
-
 const carDetails = document.querySelector('.car-details')
 
+const addFormInputs = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    let car = {
+        name: form['carName'].value,
+        model: form['model'].value,
+        year: form['year'].value,
+        isElectric: form['isElectric'].value,
 
-var car = {
-    carName: carName.value,
-    model: model.value,
-    year: year.value,
-    isElectric: isElectric.value
+    };
 
-}
+    showCar.addEventListener('click', () => {
 
+        carDetails.innerHTML = `نام برند :${car.name}   <br> مدل : ${car.model} <br> سال ساخت :${car.year}<br> ${car.isElectric}  `
 
-
-showCar.addEventListener('click', () => {
-    if (car.isElectric === "بله") {
-        carDetails.innerHTML = `نام برند :${carName.value}   <br> مدل : ${model.value} <br> سال ساخت :${year.value}<br> ماشین برقی است`
-
-    }
-    else {
-        carDetails.innerHTML = `نام برند :${carName.value}   <br> مدل : ${model.value} <br> سال ساخت :${year.value}<br> ماشین برقی نیست`
 
     }
-})
+
+    )
+};
+
+
 
 
 /////three
@@ -160,8 +154,7 @@ const equal = document.querySelector('.equal')
 const divide = document.querySelector('.divide')
 const multiple = document.querySelector('.multiple')
 
-const opration = [plus.value, minus.value, equal.value, divide.value, multiple.value]
-console.log(opration)
+let opration = null
 numbers.forEach((number) => {
     console.log(number.innerText)
 
@@ -188,34 +181,55 @@ multiple.addEventListener('click', () => {
 divide.addEventListener('click', () => {
     display.value += divide.innerHTML
 })
-
+let result = []
 equal.addEventListener('click', () => {
 
-if(opr = display.value.split("+")){
-    
-    // opr = display.value.split("*")
-    // opr = display.value.split("/")
-    opr.map(item => {
+    if (display.value.includes('+')) {
+        result = display.value.split('+')
+        opration = "+"
+    }
+    else if (display.value.includes('-')) {
+        result = display.value.split('-')
+        opration = "-"
+    }
+    else if (display.value.includes('*')) {
+        result = display.value.split('*')
+        opration = "*"
+        console.log(result, opration)
+    }
+    else if (display.value.includes('/')) {
+        result = display.value.split('/')
+        opration = "/"
+    }
+
+    result.map(item => {
         Number(item)
 
     })
-    console.log(opr)
+    switch (opration) {
+        case "+":
+            display.value = result.reduce(function (result, item) {
+                return (result += Number(item))
+            }, 0)
+            break
+        case "-":
+            display.value = result.reduce(function (result, item) {
+                return result = Math.abs(Number(item) - result)
+            }, 0)
+            break
+        case "*":
+            display.value = result.reduce(function (result, item) {
+                return (result *= Number(item))
+            }, 1)
+            break
+        case "/":
+            for (let i = 0; i < result.length - 1; i++) {
 
-    const total = opr.reduce(function (result, item) {
-        return (result += Number(item))
-    }, 0)
-
-    display.value = total
+                display.value = result[i] / result[i + 1]
+            }
+            break
+    }
 }
-
-  
-
-
-}
-
-
-
-
 );
 
 
