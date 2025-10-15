@@ -270,7 +270,7 @@ hoopNumber.addEventListener('focus', () => {
 const sumEven = document.querySelector('.even-btn')
 const evenNum = document.querySelector('.even-number')
 const resultSum = document.querySelector('.sum')
-sumEven.addEventListener('click' , ()=>{
+sumEven.addEventListener('click', () => {
     sumEvenNumbers(evenNum.value)
 })
 function sumEvenNumbers(item) {
@@ -278,13 +278,69 @@ function sumEvenNumbers(item) {
     for (let i = 2; i <= item; i++) {
         if (i % 2 === 0) {
             sum += i
-            
+
         }
     }
     console.log(sum)
     resultSum.innerHTML = sum
-} 
+}
 evenNum.addEventListener('focus', () => {
     resultSum.innerHTML = ""
-    evenNum.value=""
+    evenNum.value = ""
 })
+
+
+// nine 
+
+
+const firstInputArray = document.querySelector('.first-input-array')
+const oneMakeArray = document.querySelector('.one-make-array')
+const secondInputArray = document.querySelector('.second-input-array')
+const twoMakeArray = document.querySelector('.two-make-array')
+const firstList = document.querySelector('.first-list')
+const secondList = document.querySelector('.second-list')
+const similarItem = document.querySelector('.similar-item')
+const similar = document.querySelector('.similar')
+let arr1 = []
+let arr2 = []
+oneMakeArray.addEventListener('click', () => {
+    arr1.push(firstInputArray.value)
+    firstList.innerHTML = arr1
+    console.log(arr1)
+})
+
+twoMakeArray.addEventListener('click', () => {
+    arr2.push(secondInputArray.value)
+    secondList.innerHTML = arr2
+    console.log(arr2)
+
+
+})
+similar.addEventListener("click", () => {
+    for (let i = 0; i <= arr1.length-1; i++) {
+        for (let j = 0; j <= arr2.length-1; j++) {
+            if (arr1[i] === arr2[j]) {
+                similarItem.innerHTML += `عدد ${arr1[i]} با ایندکس ${i}<br> از ارایه ی اول با عدد${arr2[j]} با ایندکس ${j} از ارایه ی دوم مساوی است. <br>`
+            }
+
+            
+        }
+
+    }
+})
+
+
+// ten 
+function bakhshpaziri ( a,b,c){
+    if(c % a == 0 && c % b == 0 ){
+        return "بخش پذیر بر دو عدد"
+    }
+    if( c % a == 0 && c%b != 0 ){
+        return "بر a بخش پذیر است"
+    }
+     if( c % a != 0 && c%b == 0 ){
+        return "بر b بخش پذیر است"
+    }
+}
+const javab = bakhshpaziri( 5,4,12 )
+console.log(javab)

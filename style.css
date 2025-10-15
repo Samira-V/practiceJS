@@ -360,6 +360,18 @@ border-radius: 10px;
 
 
 /* eight  */
+.sum-container{
+       /* width: 300px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+padding: 20px;
+border-radius: 10px;
+background-color: #96AAA7;
+}
+
 .even-num{
     width: 100%;
     background-color: #e7c4a0;
